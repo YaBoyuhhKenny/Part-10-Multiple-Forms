@@ -26,14 +26,33 @@ namespace Part_10_Multiple_Forms
 
         private void btnAddName_Click(object sender, EventArgs e)
         {
-            if(txtAddNames.Text.Trim() != "")
-            {                
-                FormMain.names.Add(txtAddNames.Text);
-                FormMain.names.Sort();
-                lstNames.DataSource = null;
-                lstNames.DataSource = FormMain.names;
-                txtAddNames.Text = "";
+            if (GetIndexIgnoreCase(txtAddNames.Text.Trim()) == -1)
+            {
+                if (txtAddNames.Text.Trim() != "")
+                {
+                    FormMain.names.Add(txtAddNames.Text);
+                    FormMain.names.Sort();
+                    lstNames.DataSource = null;
+                    lstNames.DataSource = FormMain.names;
+                    txtAddNames.Text = "";
+                }
             }
         }
+    
+        private static int GetIndexIgnoreCase(string naming)
+        {
+            for (int i = 0; i < FormMain.names.Count; i++)
+            {
+                if (FormMain.names[i].Equals(naming, StringComparison.CurrentCultureIgnoreCase))
+                    return i;
+            }
+            return -1;
+        }
+    
+    
+    
+    
+    
+    
     }
 }

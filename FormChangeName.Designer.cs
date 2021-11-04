@@ -33,6 +33,7 @@
             this.lblInstructions = new System.Windows.Forms.Label();
             this.txtChangeNames = new System.Windows.Forms.TextBox();
             this.btnDone = new System.Windows.Forms.Button();
+            this.lblSelected = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstNames
@@ -80,11 +81,20 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
+            // lblSelected
+            // 
+            this.lblSelected.AutoSize = true;
+            this.lblSelected.Location = new System.Drawing.Point(12, 230);
+            this.lblSelected.Name = "lblSelected";
+            this.lblSelected.Size = new System.Drawing.Size(0, 13);
+            this.lblSelected.TabIndex = 5;
+            // 
             // FormChangeName
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 252);
+            this.Controls.Add(this.lblSelected);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.txtChangeNames);
             this.Controls.Add(this.lblInstructions);
@@ -104,5 +114,6 @@
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.TextBox txtChangeNames;
         private System.Windows.Forms.Button btnDone;
+        private System.Windows.Forms.Label lblSelected;
     }
 }
