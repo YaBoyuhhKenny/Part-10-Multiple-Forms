@@ -61,8 +61,9 @@
             this.btnEditName.Name = "btnEditName";
             this.btnEditName.Size = new System.Drawing.Size(90, 25);
             this.btnEditName.TabIndex = 2;
-            this.btnEditName.Text = "Edit name";
+            this.btnEditName.Text = "Change name";
             this.btnEditName.UseVisualStyleBackColor = true;
+            this.btnEditName.Click += new System.EventHandler(this.btnEditName_Click);
             // 
             // lstnames
             // 

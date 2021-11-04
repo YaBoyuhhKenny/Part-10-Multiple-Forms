@@ -27,6 +27,7 @@ namespace Part_10_Multiple_Forms
         {
             FormAddName frmAddName = new FormAddName();
             frmAddName.ShowDialog();
+            names.Sort();
             lstnames.DataSource = null;
             lstnames.DataSource = names;
         }
@@ -34,6 +35,16 @@ namespace Part_10_Multiple_Forms
         private void btnRemoveNames_Click(object sender, EventArgs e)
         {
             names.RemoveAt(lstnames.SelectedIndex);
+            names.Sort();
+            lstnames.DataSource = null;
+            lstnames.DataSource = names;
+        }
+
+        private void btnEditName_Click(object sender, EventArgs e)
+        {
+            FormChangeName frmChangeName = new FormChangeName();
+            frmChangeName.ShowDialog();
+            names.Sort();
             lstnames.DataSource = null;
             lstnames.DataSource = names;
         }

@@ -27,7 +27,7 @@ namespace Part_10_Multiple_Forms
         private void btnAddName_Click(object sender, EventArgs e)
         {
             if(txtAddNames.Text.Trim() != "")
-            {
+            {                
                 FormMain.names.Add(txtAddNames.Text);
                 FormMain.names.Sort();
                 lstNames.DataSource = null;

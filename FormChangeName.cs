@@ -27,11 +27,12 @@ namespace Part_10_Multiple_Forms
         {
             if (txtChangeNames.Text.Trim() != "")
             {
-                FormMain.names.Add(txtAddNames.Text);
+                FormMain.names.RemoveAt(lstNames.SelectedIndex);               
+                FormMain.names.Insert(lstNames.SelectedIndex, txtChangeNames.Text);
                 FormMain.names.Sort();
                 lstNames.DataSource = null;
                 lstNames.DataSource = FormMain.names;
-                txtAddNames.Text = "";
+                txtChangeNames.Text = "";
             }
         }
     }
